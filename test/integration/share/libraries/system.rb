@@ -38,11 +38,16 @@ class SystemResource < Inspec.resource(1)
     case inspec.platform[:name]
     when 'amazon'
       'amazonlinux'
+    when 'windows_8.1_pro'
+      'windows'
+    when 'windows_server_2019_datacenter'
+      'windows-server'
     else
       inspec.platform[:name]
     end
   end
 
+  # rubocop:disable Metrics/MethodLength
   def build_platform_release
     case inspec.platform[:name]
     when 'amazon'
@@ -52,8 +57,22 @@ class SystemResource < Inspec.resource(1)
       'base-latest'
     when 'gentoo'
       "#{inspec.platform[:release].split('.')[0]}-#{derive_gentoo_init_system}"
+    when 'windows_8.1_pro'
+      '8.1'
+    when 'windows_server_2019_datacenter'
+      '2019'
     else
       inspec.platform[:release]
+    end
+  end
+  # rubocop:enable Metrics/MethodLength
+
+  def derive_gentoo_init_system
+    case inspec.command('systemctl').exist?
+    when true
+      'sysd'
+    else
+      'sysv'
     end
   end
 
