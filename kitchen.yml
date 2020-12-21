@@ -154,8 +154,8 @@ suites:
         base:
           '*':
             - sudoers._mapdata
-            - sudoers
-            - sudoers.included
+            # - sudoers
+            # - sudoers.included
       pillars:
         top.sls:
           base:
