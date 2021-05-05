@@ -1,0 +1,243 @@
+= Changelog
+
+:sectnums!:
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.23.3...v0.23.4++[0.23.4^] (2021-04-30)
+
+=== Bug Fixes
+
+* *sudoers/included:* fix idempotence with purge_includedir=True
+(https://github.com/saltstack-formulas/sudoers-formula/commit/a64bf8977744d9c8e063a937e8b6e40cc2a1058e[a64bf89^])
+
+=== Continuous Integration
+
+* *gemfile+lock:* use `ssf` customised `kitchen-docker` repo [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/73379d6b23dc9df4b999ef29ad4019826cc56230[73379d6^])
+* *kitchen+ci:* use latest pre-salted images (after CVE) [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/32e3825e63b2a289d4c2d8e9b09e6e6f989ee320[32e3825^])
+* *kitchen+gitlab:* adjust matrix to add `3003` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/285cdaa7786af36236d20b7630fbfba7b4afae75[285cdaa^])
+* *kitchen+gitlab-ci:* use latest pre-salted images [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/cfb67f9545c20d09bb54b0950fbc8a9e9b8d42da[cfb67f9^])
+* *pre-commit:* update hook for `rubocop` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/7c1b16f9636217d2fc0cc76dad89631393858ad5[7c1b16f^])
+
+=== Tests
+
+* *_mapdata:* add verification file for `fedora-34` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/d90f31bbfaf6326ea99245cef7c9f5212b7ad236[d90f31b^])
+* standardise use of `share` suite & `_mapdata` state [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/e58973f6a7d991bc93800aa54d5ffae0e3792b33[e58973f^])
+* *_mapdata:* add verification files for new platforms
+(https://github.com/saltstack-formulas/sudoers-formula/commit/96a5724ffc888f72f10ee3fddc7aeb74c0b503ec[96a5724^])
+* *share:* standardise with latest changes [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/67f85fa218a9de488534ad0f51719c16590b4b4f[67f85fa^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.23.2...v0.23.3++[0.23.3^] (2021-01-14)
+
+=== Bug Fixes
+
+* *_mapdata:* ensure map data is directly under `values`
+(https://github.com/saltstack-formulas/sudoers-formula/commit/e2c2a8f1a2d19f789034e2e1ecf36f48858ec0c4[e2c2a8f^])
+
+=== Tests
+
+* *_mapdata:* update for `_mapdata/init.sls` change
+(https://github.com/saltstack-formulas/sudoers-formula/commit/a018875c037275b454594a2403f5a43be1982b81[a018875^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.23.1...v0.23.2++[0.23.2^] (2020-12-23)
+
+=== Code Refactoring
+
+* *map:* use top-level `values:` key in `map.jinja` dumps
+(https://github.com/saltstack-formulas/sudoers-formula/commit/a643385dafbe5c4e06fc452b6bc69114a3aeff63[a643385^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.23.0...v0.23.1++[0.23.1^] (2020-12-22)
+
+=== Continuous Integration
+
+* *commitlint:* ensure `upstream/master` uses main repo URL [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/c2182efdfac6a15dd8c9a9465cc35905b7a0421b[c2182ef^])
+* *gitlab-ci:* add `rubocop` linter (with `allow_failure`) [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/3f34c0a6b05dccebc44e71f6541574767fe1021b[3f34c0a^])
+
+=== Tests
+
+* *_mapdata:* fix existing verification files
+(https://github.com/saltstack-formulas/sudoers-formula/commit/b7aa04db2828284013ea5ba85f388c67e11599ee[b7aa04d^])
+* *map:* standardise `map.jinja` verification
+(https://github.com/saltstack-formulas/sudoers-formula/commit/ac8921f11a75e0e3be558bb148e4348e21c26ed6[ac8921f^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.22.2...v0.23.0++[0.23.0^] (2020-12-16)
+
+=== Bug Fixes
+
+* permissions on sudoers include dir were wrong
+(https://github.com/saltstack-formulas/sudoers-formula/commit/c6a3a6040f3994a45f2a5de7625e958da412603d[c6a3a60^])
+
+=== Code Refactoring
+
+* change pillar calls
+(https://github.com/saltstack-formulas/sudoers-formula/commit/d5002c3c250372acdb6295bd23e51053803f99ce[d5002c3^])
+* convert map.jinja to new standards
+(https://github.com/saltstack-formulas/sudoers-formula/commit/ee173b0041d232bef04a2feafdb51b6f3af007d1[ee173b0^])
+
+=== Continuous Integration
+
+* *gitlab-ci:* use GitLab CI as Travis CI replacement
+(https://github.com/saltstack-formulas/sudoers-formula/commit/cdf0d44053985566bb9d06ee4925a2de70c022f1[cdf0d44^])
+* *pre-commit:* add to formula [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/cfcece9e1fc4e04c437b9130e0cbba2212e4d332[cfcece9^])
+* *pre-commit:* enable/disable `rstcheck` as relevant [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/df72fbadf85471b3620969c4b7ed935e25c32193[df72fba^])
+* *pre-commit:* finalise `rstcheck` configuration [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/02020503ea3199c83ceee54a142733438c17ce51[0202050^])
+
+=== Features
+
+* implement option to purge included files directory
+(https://github.com/saltstack-formulas/sudoers-formula/commit/c5acbc696ae230e673f64f57b815a08963e44a90[c5acbc6^])
+
+=== Styles
+
+* fix rubocop
+(https://github.com/saltstack-formulas/sudoers-formula/commit/d67a06254a2966aae9c624bb05e122245cbbbe1f[d67a062^])
+
+=== Tests
+
+* fix mapdata files
+(https://github.com/saltstack-formulas/sudoers-formula/commit/7400528fd26c8b1b18fd3e910162b5060be955b0[7400528^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.22.1...v0.22.2++[0.22.2^] (2020-08-26)
+
+=== Bug Fixes
+
+* *release.config.js:* use full commit hash in commit link [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/551f300b4b340ef41ac1088164f05c15c6245a49[551f300^])
+
+=== Continuous Integration
+
+* *gemfile:* restrict `train` gem version until upstream fix [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/b9dd8b1c0fb31a351bf7920a38d4b38ac6c7fd18[b9dd8b1^])
+* *gemfile.lock:* add to repo with updated `Gemfile` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/54e19fdd984879c129799cc496be7321fb52f7de[54e19fd^])
+* *kitchen:* avoid using bootstrap for `master` instances [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/567ff29b989cb94f07d061d6efbb9c352bc34a0b[567ff29^])
+* *kitchen:* use `debian-10-master-py3` instead of `develop` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/b8d5c0bfa133213417273b64437ddcddf6d3491b[b8d5c0b^])
+* *kitchen:* use `develop` image until `master` is ready (`amazonlinux`)
+ [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/9f217a2675e459561666313c4a38f446accc2681[9f217a2^])
+* *kitchen:* use `saltimages` Docker Hub where available [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/242f71956d2cad65900f3f76426e1698e2e0ac95[242f719^])
+* *kitchen+travis:* remove `master-py2-arch-base-latest` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/a2729d05eb1c4e016bf3e982bb2a90e1eac90601[a2729d0^])
+* *kitchen+travis:* upgrade matrix after `2019.2.2` release [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/e32be015d6b4f8df0a1862d56d25cde4af2597a0[e32be01^])
+* *kitchen+travis:* use latest pre-salted images
+(https://github.com/saltstack-formulas/sudoers-formula/commit/cd2950289eda2eacde050b3edb52a9e917bf41a2[cd29502^])
+* *travis:* add notifications => zulip [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/7b5f0e95bf5eac49e4b97554731f7d226af24dcf[7b5f0e9^])
+* *travis:* apply changes from build config validation [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/08ca2a6ebb476a41fa2b0a25ecb2dcba2793303d[08ca2a6^])
+* *travis:* merge `rubocop` linter into main `lint` job
+(https://github.com/saltstack-formulas/sudoers-formula/commit/371bed2d7a2a7174993e5eb6224f153fed56efcb[371bed2^])
+* *travis:* opt-in to `dpl v2` to complete build config validation [skip
+ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/43cf4c6b45fad30c9958e9e83ff708d822627ebb[43cf4c6^])
+* *travis:* quote pathspecs used with `git ls-files` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/438ba3e5d4a1dce57ce5a94c9adb4a519187c83b[438ba3e^])
+* *travis:* run `shellcheck` during lint job [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/f87c4baa3041becb18ace7aa1e64595f51bb0f74[f87c4ba^])
+* *travis:* update `salt-lint` config for `v0.0.10` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/2fe682effc8e129278da17a2bb3a9feb1f29fdd3[2fe682e^])
+* *travis:* use `major.minor` for `semantic-release` version [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/1fc0e95f6ac6674867777d99602d1120454f7887[1fc0e95^])
+* *travis:* use build config validation (beta) [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/5a6ed537d6dc1c6d8c74f362375c36db7310b9cc[5a6ed53^])
+* *workflows/commitlint:* add to repo [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/32ae43546395072a108e59b885d0db0bcecaf302[32ae435^])
+
+=== Documentation
+
+* *contributing:* remove to use org-level file instead [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/67880a513e6da55c7beef8ce7b391c45953063f7[67880a5^])
+* *readme:* update link to `CONTRIBUTING` [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/9a36e1a933d833ef16fc34eaceda8859866b2c8e[9a36e1a^])
+
+=== Performance Improvements
+
+* *travis:* improve `salt-lint` invocation [skip ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/8314aa0df1bc510b3efbd1c8a07f361f3f94f1f3[8314aa0^])
+
+=== Tests
+
+* *map:* verify `map.jinja` dump using `_mapdata` state
+(https://github.com/saltstack-formulas/sudoers-formula/commit/63865a286ef37dec6cdc1b4e1b4ddaa36baca594[63865a2^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.22.0...v0.22.1++[0.22.1^] (2019-10-11)
+
+=== Bug Fixes
+
+* *rubocop:* add fixes using `rubocop --safe-auto-correct`
+(https://github.com/saltstack-formulas/sudoers-formula/commit/652c350[652c350^])
+* *rubocop:* fix remaining errors manually
+(https://github.com/saltstack-formulas/sudoers-formula/commit/a10ea35[a10ea35^])
+
+=== Continuous Integration
+
+* *kitchen:* change `log_level` to `debug` instead of `info`
+(https://github.com/saltstack-formulas/sudoers-formula/commit/2821526[2821526^])
+* *kitchen:* install required packages to bootstrapped `opensuse` [skip
+ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/9719ac9[9719ac9^])
+* *kitchen:* use bootstrapped `opensuse` images until `2019.2.2` [skip
+ci]
+(https://github.com/saltstack-formulas/sudoers-formula/commit/e63f441[e63f441^])
+* *kitchen+travis:* replace EOL pre-salted images
+(https://github.com/saltstack-formulas/sudoers-formula/commit/dea2da0[dea2da0^])
+* *platform:* add `arch-base-latest`
+(https://github.com/saltstack-formulas/sudoers-formula/commit/55ce214[55ce214^])
+* merge travis matrix, add `salt-lint` & `rubocop` to `lint` job
+(https://github.com/saltstack-formulas/sudoers-formula/commit/f3a98c2[f3a98c2^])
+* merge travis matrix, add `salt-lint` & `rubocop` to `lint` job
+(https://github.com/saltstack-formulas/sudoers-formula/commit/96dcd0f[96dcd0f^])
+* use `dist: bionic` & apply `opensuse-leap-15` SCP error workaround
+(https://github.com/saltstack-formulas/sudoers-formula/commit/7b44df2[7b44df2^])
+* *travis:* merge `rubocop` linter into main `lint` job
+(https://github.com/saltstack-formulas/sudoers-formula/commit/9df9a48[9df9a48^])
+* *yamllint:* add rule `empty-values` & use new `yaml-files` setting
+(https://github.com/saltstack-formulas/sudoers-formula/commit/5e22568[5e22568^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.21.1...v0.22.0++[0.22.0^] (2019-08-17)
+
+=== Continuous Integration
+
+* *kitchen+travis:* modify matrix to include `develop` platform
+(https://github.com/saltstack-formulas/sudoers-formula/commit/3d42a82[3d42a82^])
+
+=== Features
+
+* *yamllint:* include for this repo and apply rules throughout
+(https://github.com/saltstack-formulas/sudoers-formula/commit/8d08719[8d08719^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.21.0...v0.21.1++[0.21.1^] (2019-05-29)
+
+=== Tests
+
+* *kitchen:* tests on config files
+(https://github.com/saltstack-formulas/sudoers-formula/commit/5fa1cf1[5fa1cf1^])
+
+== link:++https://github.com/saltstack-formulas/sudoers-formula/compare/v0.20.0...v0.21.0++[0.21.0^] (2019-05-29)
+
+=== Documentation
+
+* fix `CONTRIBUTING` and `README`
+(https://github.com/saltstack-formulas/sudoers-formula/commit/d604876[d604876^]),
+closes
+https://github.com/saltstack-formulas/sudoers-formula/issues/51[#51^]
+
+=== Features
+
+* implementing semantic release
+(https://github.com/saltstack-formulas/sudoers-formula/commit/1a59d4e[1a59d4e^])
